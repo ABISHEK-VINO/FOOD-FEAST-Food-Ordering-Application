@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Restbill.css" />
+    <script src="Restbill.js"></script>
+    <link rel="icon" type="image/jpg" href="./logo.jpg"/>
+    <title>FOOD & FEAST</title>
+  </head>
+  <body>
+    <div class="nav">
+      FOOD & FEAST
+      <ul class="nav-links">
+        <li><a href="" id="nl">HOME</a></li>
+        <li><a href="#ctgy" id="nl">MENU</a></li>
+        <li><a href="#abt" id="nl">ABOUT US</a></li>
+        <li><a href="#cnt" id="nl">CONTACT US</a></li>
+      </ul>
+      <a href="#bill1">
+        <span class="bb">
+            <img src="cart.png" height="50px" id="cartpic" />
+        </span>
+    </a>
+    </div>
+
+    <header>
+      <div class="header-content">
+        <h2 id="quote">Explore Our Taste</h2>
+        <div class="line"></div>
+        <h1>Count The Memories Not Calories</h1>
+        <br />
+      </div>
+    </header>
+
+    <!-- veg or Nv -->
+
+    <h2 id="ctgy"  class="category">Category</h2>
+
+    <div class="menusel">
+      <div class="veg">
+        <img src="veg.jfif" height="200px" width="200px" />
+        <br />
+        <button class="btnc" onclick="toggleVeg()">VEG</button>
+      </div>
+      <div class="veg">
+        <img src="nonveg.jfif" height="200px" width="200px" />
+        <br />
+        <button class="btnc" onclick="toggleNonveg()">NON VEG</button>
+      </div>
+    </div>
+
+    <h2 class="menu" id="m">MENU</h2><br>
+
+    <div id="contVeg" class="contNonveg">
+      <div class="card1">
+        <img class="pic" src="./veg/dosa.jpg"/>
+        <p>
+          DOSA
+        </p>
+        <button onclick="DosaSelect()">ADD</button>
+        <input type="number" id="DNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="DosaUnselect()">REMOVE</button>
+      </div>
+
+      <div class="card1">
+        <img class="pic" src="./veg/idly.jpg"/>
+        <p>
+          IDLY
+        </p>
+        <button onclick="IdlySelect()">ADD</button>
+        <input type="number" id="INum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="IdlyUnselect()">REMOVE</button>
+      </div>
+      <div class="card1">
+        <img class="pic" src="./veg/veg biriyani.jfif"/>
+        <p>
+          VEG BRIYANI
+        </p>
+        <button onclick="VegbriyaniSelect()">ADD</button>
+        <input type="number" id="VBNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="VegbriyaniUnselect()">REMOVE</button>
+      </div>
+
+      <div class="card1">
+        <img class="pic" src="./veg/curd rice.jfif"/>
+        <p>
+         CURD RICE
+        </p>
+        <button onclick="CurdSelect()">ADD</button>
+        <input type="number" id="CSNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="CurdUnselect()">REMOVE</button>
+      </div>
+      <div class="card1">
+        <img class="pic" src="./veg/mint rice.jfif"/>
+        <p>
+          MINT RICE
+        </p>
+        <button onclick="MintSelect()">ADD</button>
+        <input type="number" id="MRNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="MintUnselect()">REMOVE</button>
+      </div>
+      <div class="card1">
+        <img class="pic" src="./veg/idiyappam.jfif" >
+        <p>
+          IDIYAPPAM
+        </p>
+        <button onclick="IdiSelect()">ADD</button>
+        <input type="number" id="IdiNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="IdiUnselect()">REMOVE</button>
+      </div>
+    </div>
+    
+    
+    <div id="contNonveg" class="contNonveg">
+      <div class="card1" id="bi">
+        <img  class="pic"src="./nonveg/biriyani.webp" />
+        <p>
+          BIRIYANI
+        </p>
+        <button id="Br" onclick="Briyani()">ADD</button>
+        <input type="number" id="brNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="BriyaniUnselect()">REMOVE</button>
+      </div>
+
+      <div class="card1">
+        <img class="pic"src="./nonveg/OIP.jfif" />
+        <p>
+         FISH FRY
+        </p>
+        <button onclick="Fishfry()">ADD</button>     
+        <input type="number" id="ffNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="FishfryUnselect()">REMOVE</button>
+      </div>
+
+      <div class="card1">
+        <img class="pic"src="./nonveg/Non-Veg-Food-PNG-Image.png" />
+        <p>
+          CHICKEN NUGGETS
+        </p>
+        <button onclick="NuggetsSelect()">ADD</button>
+        <input type="number" id="cnNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="NuggetsUnselect()">REMOVE</button>
+      </div>
+
+      <div class="card1">
+        <img class="pic"src="./nonveg/crab.jfif" />
+        <p>
+          JUICY CRAB
+        </p>
+        <button onclick="CrabSelect()">ADD</button>
+        <input type="number" id="jcNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="CrabUnselect()">REMOVE</button>
+      </div>
+      <div class="card1">
+        <img class="pic"src="./nonveg/Kothuparotta8.webp"/>
+        <p>
+          CHICKEN CURRY
+        </p>
+        <button onclick="ParottaSelect()">ADD</button>
+        <input type="number" id="cpNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="ParottaUnselect()">REMOVE</button>
+      </div>
+      <div class="card1">
+        <img class="pic"src="./nonveg/Mutton-Fry.jpg" />
+        <p>
+          Mutton-Fry
+        </p>
+        <button onclick="MuttonSelect()">ADD</button>
+        <input type="number" id="mfNum" value="1" />
+        <br />
+        <button id="rmbtn" onclick="MuttonUnselect()">REMOVE</button>
+      </div>
+    </div>
+
+
+    <!----------------------------------------------------->
+    <div class="bill" id="bill1">
+      <h1>BILL</h1>
+
+      <div class="cartcont">
+      <div class="cartitem">
+        <h3 >ITEMS</h3>
+        <h3 class="it" id="item"> </h3>
+      </div>
+      <div class="cartprice">
+        <h3>PRICE</h3>
+        <h3 class="pr" id="pr"> </h3>
+      </div>
+      <!-- <div class="cartqty">
+        <h3 class="qty" id="qty">Qty</h3>
+      </div> -->
+    </div>
+      
+      
+      <p id="pay"  class="pay">Price:</p>
+      <p id="offer"></p>
+      <h2 id="total"></h2>
+      <button id="cal" onclick="calculate()">CALCULATE</button>        
+
+
+  </div>
+  <!---------------------------------------------------------Contact us----------------------------------------------- -->
+  <div id="cnt" class="contact-container">
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+<div class="contact-left-title">
+<h2>Get in touch</h2>
+<hr>
+</div>
+<input type="hidden" name="access_key" value="c78a11fe-7619-4b94-8104-1f7da86053cd">
+<input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+<input type="email" name="email" placeholder="Your Email" placeholder="Your Name" class="contact-inputs" required>
+
+<textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+<button id="sub"  type="submit">Submit </button>
+</form>
+<div class="contact-right">
+<img src="contact us.png " alt="" height="300px" width="400px">
+</div>
+</div>
+<!-- --------------------------------ABOUT US----------------------------------------------------------------- -->
+<div id="abt" class="about-container">
+<div class="about-left">
+   <img  id="abtimg"    src="flying.png" height="400px" width="400px">
+ 
+
+
+</div>
+
+<div  class="about-right">
+  <h2>Who we are</h2>
+  <hr>
+<p>Welcome to Food And Feast, where culinary excellence meets a warm, inviting ambiance. Nestled in the heart of TamilNadu , our journey began with a passion for creating unforgettable dining experiences. Every dish is a symphony of flavors, crafted with locally sourced ingredients and served with a side of genuine hospitality. Join us on a culinary adventure that celebrates the art of food, community, and the joy of shared moments. At Food And Feast, we don't just serve meals; we create memories. Discover the story on your plate and savor the essence of  Food And Feast. Welcome to a place where good food and great company come together.</p>
+<img src="Thankyou.png" height="210px" width="230px">
+</div>
+
+</div>
+  </body>
+</html>
+
